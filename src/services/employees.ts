@@ -1,4 +1,15 @@
-import { EmployeeMutation, EmployeeQuery } from "../models";
+import { Dispatch, SetStateAction } from "react";
+
+import { Employee, EmployeeMutation, EmployeeQuery } from "../models";
+import { API } from "./instance";
+
+type UseState<T> = Dispatch<SetStateAction<T>>;
+
+const getEmployees = async (
+  page: number,
+  setEmployees: UseState<Employee[] | undefined>,
+  setError: UseState<any>
+): Promise<void> => {};
 
 export const useGetEmployees = (page: number = 1): EmployeeQuery => {
   return {

@@ -13,3 +13,18 @@ Hooks are nice, I promise.
 1. Go to `hooks/useScrollToTop.tsx`.
 2. Get the current location using the location hook from react router dom.
 3. Each time the location changes, the page scrolls to top (hint: use `useEffect`).
+
+## Query Hooks
+
+1. Go to `services/employees.ts`.
+2. Add a state to manage your list of employees and a state to manage your errors.
+   - Hint: you will need to explicitly add type annotations for your hooks.
+3. Add the missing logic in `getEmployees`.
+   - Add an api call to `/employees?_page=${page}` using the imported `API` instance.
+   - Make sure to wrap your api call in a `try-catch` block
+     - In the success block use `setEmployees` to set the employees
+     - In the error block use `setError` to set the caught `error`
+4. Add a `useEffect` to your `useGetEmployees`.
+   - Make sure to "react" to `page` changes
+   - Use the `getEmployees` function inside the `useEffect`, and pass it the `page` and your set state hooks
+   - Add a `cleanup` function that will clear all `errors` and reset `employees` to be `undefined`
