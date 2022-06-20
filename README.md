@@ -50,3 +50,19 @@ Abstract away pagination management into a custom hook.
    - Use the `setEmployee` parameter to set the retrieved data from the response
    - If an error occurred then use `setError` to set the response error
 3. In the return make sure to use `createEmployee` in the anonymous function (i.e., the arrow function) and return the `data`, `loading`, and `error` from the state hooks.
+
+## React Hook Forms
+
+1. Add the `schema` in `src/components/EmployeeCreate/useEmployeeForm.ts`.
+   - **id**: `number, required`
+   - **firstName**: `string, required`
+   - **lastName**: `string`
+   - **email**: `string, email, required`
+   - **gender**: `string, Male/Female`
+   - **ipAddress**: `string`
+2. Add the `useForm` hook from `react-hook-form` in the same file, and resolve your `schema` (add defaults to avoid warnings regarding your inputs changing from controlled to uncontrolled).
+3. Call `useCreateEmployee` in `EmployeeCreate` and destructure the "trigger" and the "state".
+4. Call the `useEmployeeForm` in `EmployeeCreate` and use it to add the markup needed in `EmployeeCreate`, make sure to add `noValidate` to your `form` tag.
+   - Create an `onSubmit` variable that uses `handleSumit` from your hook and add an arrow function that takes the form data and calls our "trigger" from `useCreateEmployee`
+   - Pass the `onSubmit` variable to `onSubmit` on the `form` tag
+   - Use `TextField` component that is imported and `Controller` from `react-hook-form` to control our text field

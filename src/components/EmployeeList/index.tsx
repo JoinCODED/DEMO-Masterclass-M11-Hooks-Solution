@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import { useGetEmployees } from "../../services";
 import Employee from "../Employee";
@@ -27,6 +28,9 @@ const EmployeeList = () => {
 
   return (
     <main>
+      <button>
+        <Link to="add">Add employee</Link>
+      </button>
       <article>
         <h1>Employees</h1>
         <section>{employees}</section>
