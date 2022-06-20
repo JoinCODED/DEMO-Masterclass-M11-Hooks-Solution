@@ -1,0 +1,8 @@
+header > ul {
+  display: flex;
+  gap: 1em;
+
+  & > li {
+    color: purple;
+  }
+}

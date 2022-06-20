@@ -1,0 +1,36 @@
+main {
+  height: 100%;
+  width: 100%;
+
+  display: grid;
+  place-items: center;
+}
+
+article {
+  width: 100%;
+  max-width: 75rem;
+}
+
+section {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  margin: 1em;
+}
+
+section > div {
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 1em;
+
+  &:nth-child(even) {
+    background-color: yellow;
+  }
+
+  & > ul > li:nth-child(2) {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
