@@ -9,7 +9,7 @@ export const getApiUrl = (
       return url;
     }
   }
-  return "https://api.example.com";
+  return "http://localhost:8000";
 };
 
 export const API = axios.create({

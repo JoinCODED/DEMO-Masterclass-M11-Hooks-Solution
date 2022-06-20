@@ -28,7 +28,7 @@ section > div {
     background-color: yellow;
   }
 
-  & > ul > li:nth-child(2) {
+  & > ul > li {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;

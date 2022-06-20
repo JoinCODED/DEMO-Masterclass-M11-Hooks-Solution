@@ -1,0 +1,29 @@
+.paginate-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+
+  font: 1rem arial, sans-serif;
+}
+
+.paginate-btn {
+  background-color: rgb(89, 159, 135);
+  cursor: pointer;
+  color: white;
+
+  border-radius: 6px;
+
+  padding: 0.5em;
+
+  min-height: 1rem;
+  min-width: 3rem;
+
+  &:hover {
+    background-color: rgb(72, 95, 87);
+  }
+
+  &:disabled {
+    background-color: #333;
+    cursor: not-allowed;
+  }
+}

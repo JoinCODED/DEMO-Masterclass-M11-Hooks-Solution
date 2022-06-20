@@ -1,12 +1,13 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import { usePaginate } from "../../hooks";
 import { useGetEmployees } from "../../services";
 import Employee from "../Employee";
+import Paginate from "../Paginate";
 import "./style.scss";
 
 const EmployeeList = () => {
-  const [page, setPage] = useState(1);
+  const { page, back, next } = usePaginate();
   const employeeQuery = useGetEmployees(page);
 
   if (employeeQuery.loading) {
@@ -35,6 +36,7 @@ const EmployeeList = () => {
         <h1>Employees</h1>
         <section>{employees}</section>
       </article>
+      <Paginate page={page} back={back} next={next} />
     </main>
   );
 };
