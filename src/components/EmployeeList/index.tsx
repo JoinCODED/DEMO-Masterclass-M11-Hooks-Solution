@@ -1,9 +1,12 @@
+import { useState } from "react";
+
 import { useGetEmployees } from "../../services";
 import Employee from "../Employee";
 import "./style.scss";
 
 const EmployeeList = () => {
-  const employeeQuery = useGetEmployees();
+  const [page, setPage] = useState(1);
+  const employeeQuery = useGetEmployees(page);
 
   if (employeeQuery.loading) {
     return <h1>Loading...</h1>;

@@ -28,3 +28,12 @@ Hooks are nice, I promise.
    - Make sure to "react" to `page` changes
    - Use the `getEmployees` function inside the `useEffect`, and pass it the `page` and your set state hooks
    - Add a `cleanup` function that will clear all `errors` and reset `employees` to be `undefined`
+
+### Pagination Bonus
+
+1. Add a `next` button to your employee list page that increments the `page` number state.
+2. Add a `back` button to your employee list page that decrements the `page` number state.
+
+### Declarative Bonus
+
+Abstract away pagination management into a custom hook.
