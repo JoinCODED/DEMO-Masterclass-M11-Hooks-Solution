@@ -19,4 +19,7 @@ export type EmployeeQuery =
       error: undefined;
     };
 
-export type EmployeeMutation = [(data: Employee) => void, Employee];
+export type EmployeeMutation = [
+  (data: Employee) => void,
+  { data: Employee | undefined; loading: boolean; error: any }
+];

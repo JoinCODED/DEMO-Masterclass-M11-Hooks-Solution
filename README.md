@@ -37,3 +37,16 @@ Hooks are nice, I promise.
 ### Declarative Bonus
 
 Abstract away pagination management into a custom hook.
+
+## Mutations
+
+1. Add three state hooks to `useCreateEmployee`.
+   - **data**: `Employee | undefined`
+   - **loading**: `boolean`
+   - **error**: `any`
+2. Add the missing logic for `createEmployee`.
+   - Make a `POST` call to `/employees`
+   - Pass the `data` provided in the parameters to the `json` body of the api call
+   - Use the `setEmployee` parameter to set the retrieved data from the response
+   - If an error occurred then use `setError` to set the response error
+3. In the return make sure to use `createEmployee` in the anonymous function (i.e., the arrow function) and return the `data`, `loading`, and `error` from the state hooks.

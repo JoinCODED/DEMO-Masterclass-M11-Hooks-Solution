@@ -19,16 +19,13 @@ export const useGetEmployees = (page: number = 1): EmployeeQuery => {
   } as EmployeeQuery;
 };
 
+const createEmployee = async (
+  data: Employee,
+  setEmployee: UseState<Employee | undefined>,
+  setLoading: UseState<boolean>,
+  setError: UseState<any>
+): Promise<void> => {};
+
 export const useCreateEmployee = (): EmployeeMutation => {
-  return [
-    (data) => {},
-    {
-      id: 0,
-      firstName: "",
-      lastName: "",
-      email: "",
-      gender: "",
-      ipAddress: "",
-    },
-  ];
+  return [(data) => {}, { data: undefined, loading: true, error: undefined }];
 };
