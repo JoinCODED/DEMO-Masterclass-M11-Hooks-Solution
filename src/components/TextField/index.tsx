@@ -1,5 +1,7 @@
 import clsx from "clsx";
 
+import "./style.scss";
+
 type TextFieldProps = JSX.IntrinsicElements["input"] & {
   helperText?: string;
   error?: boolean;
